@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -16,7 +17,6 @@
     --white:#fff;
     --grey:#c1c1c1;
     --lightgrey:#f1f1f1;
-
 }
 
 body {
@@ -304,6 +304,24 @@ aside h2 {
 }
 
 .article-activities {
+    background-color: white;
+    box-shadow: 0 5px 100px 0 #00000040;
+    border-radius: 12px;
+}
+
+#section-activities {
+    margin-bottom: 50px;
+}
+
+#section-activities h2 {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+#section-activities h3 {
+    text-align: center;
+    padding: 10px;
     
 }
 
