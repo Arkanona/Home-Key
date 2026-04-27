@@ -58,14 +58,15 @@ header a {
     transition: all 0.3s ease-in-out;
 }
 
-header > nav > ul > li > a {
+header > nav li a {
     color: black;
     transition: all 0.3s ease-in-out;
 
     &:hover{
-    color: #f60303;
-    transition: all 0.3s ease-in-out;
-    border-top: 1px solid #f60303;
+        color: #f60303;
+        transition: all 0.2s ease-in-out;
+        border-top: 1px solid #f60303;
+        padding-top: 15px;
     }
 }
 
@@ -138,6 +139,7 @@ main > section > article p {
     display: flex;
     gap: 20px;
     list-style: none;
+
 }
 
 #article-ll li {
@@ -147,6 +149,18 @@ main > section > article p {
     border: 1px solid #F60303;
     border-radius: 12px;
     padding: 7px;
+
+    &:hover{
+        background-color: #f60303;
+    }
+
+    &:hover i{
+        color: #fff;
+    }
+
+    &:hover p {
+        color: white;
+    }
 }
 
 #article-ll a {
@@ -197,6 +211,7 @@ div img {
     background-color: #f1f1f1;
     padding: 40px;
     border-radius: 12px;
+    flex: 1 0 20%;
 }
 
 #div-accomodations h2 {
@@ -217,6 +232,11 @@ div img {
     border: 1px solid white;
     border-radius: 12px;
     padding: 5px;
+
+    &:hover img {
+    transform: scale(1.02);
+    filter: grayscale(100%);    
+    }
 }
 
 .article-class div i {
@@ -244,8 +264,8 @@ div img {
     max-width: 96px;
 
     &:hover{
-    color: #f60303;
-    transition: all 0.3s ease-in-out;
+        color: #f60303;
+        transition: all 0.3s ease-in-out;
     }
 }
 
@@ -259,7 +279,6 @@ aside {
     background-color: #F1F1F1;
     border-radius: 12px;
     padding: 40px 15px;
-    max-width: 414px;
 }
 
 aside h2 {
@@ -273,6 +292,11 @@ aside h2 {
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 2px 15px 0 #C1C1C1;
+
+    &:hover img {
+        transform: scale(1.02);
+        filter: grayscale(100%);
+    }
 }
 
 .article-aside .star{
@@ -304,7 +328,6 @@ aside h2 {
 }
 
 #div-aside {
-    width: 314px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -314,14 +337,12 @@ aside h2 {
 #div-activities {
     display: flex;
     margin: auto;
-    max-width: 1440px;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
 }
 
 #div-activities img {
-    max-width: 322px;
     height: 380px;
 }
 
@@ -329,6 +350,7 @@ aside h2 {
     background-color: white;
     box-shadow: 0 5px 100px 0 #00000040;
     border-radius: 12px;
+    width: 100%;
 
     &:hover {
     transition: all 0.3s ease-in-out;
@@ -386,6 +408,11 @@ footer a {
     color: #000;
     font-weight: 400;
     font-size: 16px;
+
+    &:hover{
+        color: #f60303;
+        transition: all 0.2s ease-in-out;
+    }
 }
 
 
@@ -420,8 +447,8 @@ footer p {
         flex-direction: column;
     }
 
-    #div-activities {
-        flex-direction: column;
+    .article-activities {
+        flex: 1 0 48%;
     }
      #div-aside {
         width: auto;
@@ -433,11 +460,41 @@ footer p {
     header {
         flex-direction: column;
         gap: 20px;
+        padding-bottom: 10px;
+        align-items: initial;
+
+        & nav > ul li a:hover{
+            border-bottom: 1px solid #f60303;
+            border-top: none;
+            padding-bottom: 15px;
+            padding-top: 0;
+        }
     }
 
-    #article-ll ul {
-
+    header li {
+        width: -webkit-fill-available;
+        text-align: center;
     }
+
+    header ul {
+        gap: 0;
+        border-bottom: 1px solid #c1c1c166;
+    }
+
+    header a {
+        display: block;
+        padding-bottom: 15px;
+
+        &:hover{
+            padding-top: 0;
+        }
+    }
+
+
+    #article-ll ul{
+        flex-wrap: wrap;
+    }
+
     #section-acco {
         flex-direction: column;
     }
