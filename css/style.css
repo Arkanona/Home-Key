@@ -56,12 +56,20 @@ header ul {
 header a {
     color: black;
     transition: all 0.3s ease-in-out;
+}
+
+header > nav > ul > li > a {
+    color: black;
+    transition: all 0.3s ease-in-out;
 
     &:hover{
     color: #f60303;
     transition: all 0.3s ease-in-out;
+    border-top: 1px solid #f60303;
     }
 }
+
+
 
 /* Main */
 
@@ -233,6 +241,12 @@ div img {
     font-weight: 700;
     font-size: 18px;
     color: #000;
+    max-width: 96px;
+
+    &:hover{
+    color: #f60303;
+    transition: all 0.3s ease-in-out;
+    }
 }
 
 #section-acco {
@@ -245,6 +259,7 @@ aside {
     background-color: #F1F1F1;
     border-radius: 12px;
     padding: 40px 15px;
+    max-width: 414px;
 }
 
 aside h2 {
@@ -254,10 +269,8 @@ aside h2 {
 }
 
 .article-aside {
-    width: 334px;
-    padding: 5px;
+    width: 100%;
     background-color: white;
-    margin: 20px 40px;
     border-radius: 12px;
 }
 
@@ -289,6 +302,14 @@ aside h2 {
     padding: 0 20px;
 }
 
+#div-aside {
+    width: 314px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 #div-activities {
     display: flex;
     margin: auto;
@@ -299,7 +320,7 @@ aside h2 {
 }
 
 #div-activities img {
-    width: 322px;
+    max-width: 322px;
     height: 380px;
 }
 
@@ -325,6 +346,10 @@ aside h2 {
     
 }
 
+#section-activities img {
+    border-radius: 12px 12px 0 0;
+}
+
 /* Footer */
 
 footer {
@@ -337,12 +362,14 @@ footer div {
     justify-content: space-between;
     background-color:var(--lightgrey);
     border-radius: 15px 15px 0 0;
+    gap: 20px;
+    padding: 20px;
 }
 
-footer article {
+/* footer article {
     margin: 30px;
     width: 453px;
-}
+} */
 
 footer a {
     color: #000;
@@ -374,9 +401,50 @@ footer p {
 /* Media */
 
 @media screen and (max-width: 1024px) {
+    #section-acco {
+        flex-direction: column;
+    }
 
+    #div-image {
+        flex-direction: column;
+    }
+
+    #div-activities {
+        flex-direction: column;
+    }
+     #div-aside {
+        width: auto;
+        flex-direction: column;
+    }
 }
 
 @media  screen and (max-width: 767px) {
-    
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #article-ll ul {
+
+    }
+    #section-acco {
+        flex-direction: column;
+    }
+
+    #div-image {
+        flex-direction: column;
+    }
+
+    #div-activities {
+        flex-direction: column;
+    }
+    #div-aside {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    footer div {
+        flex-direction: column;
+    }
 }  
